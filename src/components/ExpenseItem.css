@@ -8,10 +8,10 @@
   border-radius: 12px;
   background-color: #4b4b4b;
 }
-.expense-item > div {
+/* .expense-item > div {
   color: rgb(197, 201, 201);
   font-weight: 400;
-}
+} */
 .expense-item__description {
   display: flex;
   flex-direction: column;
