@@ -1,5 +1,8 @@
-import Expenses from './components/Expenses/Expenses';
+import React from 'react';
+
 import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './components/Expenses/Expenses';
+
 const App = () => {
   const expenses = [
     {
@@ -22,12 +25,25 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  };
+
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
+
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
-};
+}
 
 export default App;
